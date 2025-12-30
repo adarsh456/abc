@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Recipe Book</title>
+    <style>
+        :root {
+            --primary: #e67e22; /* Foodie Orange */
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav h1 { color: var(--primary); margin: 0; }
+
+        /* --- NEW: Search Bar Styling --- */
+        .search-container {
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        #recipeSearch {
+            padding: 12px 20px;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 25px;
+            border: 2px solid #ddd;
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        #recipeSearch:focus {
+            border-color: var(--primary);
+        }
+
+        /* Recipe Grid */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Recipe Card */
+        .recipe-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-img {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd; 
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 20px;
+        }
+
+        .category {
+            color: var(--primary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .recipe-title {
+            margin: 10px 0;
+            font-size: 1.4rem;
+            color: var(--dark);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>🍳 MyRecipeBook</h1>
+        <div>
+            <a href="#" style="margin-left:20px; text-decoration:none; color:inherit;">Home</a>
+            <a href="#" style="margin-left:20px; text-decoration:none; color:inherit;">Categories</a>
+        </div>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" id="recipeSearch" placeholder="Search for recipes (e.g. Pancakes)...">
+    </div>
+
+    <div class="container" id="recipeContainer">
+        <article class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" alt="Salad" class="recipe-img">
+            <div class="recipe-content">
+                <span class="category">Healthy • 15 Mins</span>
+                <h3 class="recipe-title">Quinoa Power Bowl</h3>
+                <p>A fresh mix of quinoa, avocado, and lime dressing.</p>
+                <a href="Recipie/quinoa-bowl.html" class="btn">View Recipe</a>
+            </div>
+        </article>
+
+        <article class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pizza" class="recipe-img">
+            <div class="recipe-content">
+                <span class="category">Italian • 45 Mins</span>
+                <h3 class="recipe-title">Classic Margherita</h3>
+                <p>Homemade dough with fresh basil and mozzarella.</p>
+                <a href="#" class="btn">View Recipe</a>
+            </div>
+        </article>
+
+        <article class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?w=400" alt="Pancakes" class="recipe-img">
+            <div class="recipe-content">
+                <span class="category">Breakfast • 20 Mins</span>
+                <h3 class="recipe-title">Fluffy Pancakes</h3>
+                <p>The perfect weekend treat with maple syrup.</p>
+                <a href="#" class="btn">View Recipe</a>
+            </div>
+        </article>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
