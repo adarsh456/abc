@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinoa Power Bowl - Recipe</title>
+    <style>
+        :root { --primary: #e67e22; --dark: #2c3e50; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; color: #333; }
+        
+        .nav-back { padding: 20px; background: white; }
+        .nav-back a { text-decoration: none; color: var(--primary); font-weight: bold; }
+
+        .recipe-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .recipe-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 15px;
+            height: 400px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .recipe-intro { flex: 1; min-width: 300px; }
+
+        .info-bar {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fef5ed;
+            border-radius: 8px;
+        }
+
+        .info-item { text-align: center; flex: 1; }
+        .info-item span { display: block; font-weight: bold; color: var(--primary); }
+
+        .recipe-body {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-body { grid-template-columns: 1fr; }
+        }
+
+        ul, ol { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="nav-back">
+        <a href="../index.html">← Back to Gallery</a>
+    </div>
+
+    <header class="recipe-header">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800" class="recipe-image" alt="Quinoa Bowl">
+        <div class="recipe-intro">
+            <h1>Quinoa Power Bowl</h1>
+            <p>A nutrient-dense bowl packed with plant-based protein, healthy fats, and vibrant vegetables. Perfect for a quick lunch or a meal-prep dinner.</p>
+            
+            <div class="info-bar">
+                <div class="info-item"><span>Prep</span> 10m</div>
+                <div class="info-item"><span>Cook</span> 15m</div>
+                <div class="info-item"><span>Serves</span> 2</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="recipe-body">
+        <section class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>1 cup Cooked Quinoa</li>
+                <li>1 ripe Avocado</li>
+                <li>1/2 cup Cherry Tomatoes</li>
+                <li>1 tbsp Olive Oil</li>
+                <li>Fresh Lime Juice</li>
+                <li>Salt & Pepper to taste</li>
+            </ul>
+        </section>
+
+        <section class="instructions">
+            <h3>Instructions</h3>
+            <ol>
+                <li><strong>Prepare the base:</strong> Place the cooked quinoa in a large serving bowl.</li>
+                <li><strong>Chop the veggies:</strong> Slice the cherry tomatoes in half and pit/slice the avocado.</li>
+                <li><strong>Assemble:</strong> Arrange the tomatoes and avocado over the quinoa.</li>
+                <li><strong>Dress:</strong> Drizzle with olive oil and squeeze fresh lime juice over the top.</li>
+                <li><strong>Season:</strong> Add salt and pepper, toss gently, and serve immediately.</li>
+            </ol>
+        </section>
+    </div>
+
+</body>
+</html>
